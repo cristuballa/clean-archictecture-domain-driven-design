@@ -1,0 +1,6 @@
+@host=http://localhost:5236
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MTQ3YTA4Zi1mMjBjLTQ3ZmEtOTc4NC1jZWFhOTBjYmEyYWMiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJDcmlzcGluIiwiZmFtaWx5X25hbWUiOiJUdWJhbGxhIiwianRpIjoiMWRlNDUxMWYtYTgwNS00YWYzLWI4MjctMmIxZWRlNGZiNTk5IiwiZXhwIjoxNjc4NTAyNTIxLCJpc3MiOiJrY3QtaW1zIiwiYXVkIjoia2N0LWltcyJ9.6fEUAgOUbHWNfm7-2hYncDj-_I3dMlBtFapjNV4EM7M
+###
+
+GET {{host}}/items
+//Authorization: Bearer {{token}}

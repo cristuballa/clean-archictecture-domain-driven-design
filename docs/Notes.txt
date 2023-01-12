@@ -1,0 +1,127 @@
+KCT-IMS API TOOLS AND PACKAGES
+
+.NET 7 SDK
+
+** API CONTROLLER ***
+- Microsoft.AspNetCore.Mvc;
+
+*** SWAGGER ***
+https://www.youtube.com/watch?v=38bQNWKh0dk&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=2
+- Extended Swagger documentation | ASP.NET Core 5 REST API Tutorial 22
+- Swashbuckle.AspNetCore
+
+*** DOTNET USER-SECRETS ***
+- init
+- set
+- list
+
+*** LOGGING ***
+    -Serilog
+
+
+*** API VERSIONING ***
+https://www.youtube.com/watch?v=8Asq7ymF1R8 -nick chapsas
+https://www.youtube.com/watch?v=XdKpAFy6It8
+- using Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer;
+- using Microsoft.AspNetCore.Mvc.Versioning;
+
+
+***CACHE***
+
+*** 0. CLEAN ARCHITECTURE & DDD- Project Setup ***
+    https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=2
+
+
+
+*** 1.CGENERATE JWT TOKEN  ***
+    https://www.youtube.com/watch?v=38bQNWKh0dk&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=2 (Amichai)
+    https://www.youtube.com/watch?v=7ILCRfPmQxQ&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=9
+    https://www.youtube.com/watch?v=XKN0084p7WQ
+
+- using Microsoft.AspNetCore.Authentication.JwtBearer;
+- using System.IdentityModel.Tokens.Jwt;
+- using System.Security.Claims;
+- using Microsoft.Extensions.Options;
+- using Microsoft.IdentityModel.Tokens;
+
+
+*** 2. REPOSITORY PATTERN ***
+    https://www.youtube.com/watch?v=ZwQf_JQUUCQ&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=8 (Amichai)
+
+
+
+*** 3. GLOBAL ERROR HANDLING ***
+    https://www.youtube.com/watch?v=gMwAhKddHYQ&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=4
+
+- Via middleware
+- Via exception filter attribute
+- Problem Detail
+- Via error endpoint
+- Custom problem details factory
+
+
+
+*** 4. API FLOW CONTROL ***
+    https://www.youtube.com/watch?v=tZ8gGqiq_IU&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=5
+- Via exception
+- Via OneOf
+- Via FluentResults
+- Via ErroOr and Domain Errors
+
+
+
+*** 5. CQRS & MEDIATR ***
+    https://www.youtube.com/watch?v=MwMVvLBSJa8&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=6
+
+   -MediatR
+   -MediatR.Extensions.Microsoft.DependencyInjection
+
+*** 6. OBJECT MAPPING -MAPSTER ***
+    https://www.youtube.com/watch?v=vBs6naPD6RE&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=7
+    
+
+
+*** 7. VALIDATION BEHAVIOUR ***
+    https://www.youtube.com/watch?v=FXP3PQ03fa0&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=9
+
+
+
+*** 8. JWT BEARER AUTHENTICATION ***
+    https://www.youtube.com/watch?v=7ILCRfPmQxQ&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=10
+
+
+
+*** 9. MAPPING SOFTWARE LOGIC USING PROCESS MODELLING ***
+    https://www.youtube.com/watch?v=1pBGc7kKOAA&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=10
+
+
+
+*** 10. 3 STEPS FOR MODELLING A COMPLEX DOMAIN ***
+    https://www.youtube.com/watch?v=f6G46rqkePc&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=11
+
+
+
+*** 11. IMPLEMENTING AGGREGATE ROOT, ENTITY, VALUE OBJECT ***
+    https://www.youtube.com/watch?v=weGLBPky43U&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=12
+
+
+
+*** 12. DOMAIN LAYER STRUCTURE & SKELETON ***
+    https://www.youtube.com/watch?v=jnutb5Z4wyg&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=13
+
+
+
+
+*** 13. REST + DDD + CA + CQRS ****
+    https://www.youtube.com/watch?v=jm0CWlb5vvQ&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=14
+
+
+
+
+*** 14. EF CORE & DDD & CLEAN ARCHITECTURE - MAPPING AGGREGATES TO RELATIONAL DATABASE ***
+    https://www.youtube.com/watch?v=5_un3PUER8U
+
+
+
+
+

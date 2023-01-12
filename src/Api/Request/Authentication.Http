@@ -1,0 +1,24 @@
+
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMmJkMzY4MC01MjVhLTRiNWEtOTU4Yy1jYzdiOThhMGIzYzQiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJDcmlzcGluIiwiZmFtaWx5X25hbWUiOiJUdWJhbGxhIiwianRpIjoiNDgwZjFkMDMtZmZmNi00MjU4LTlmNzItYjc5YjhkMjBhNjg1IiwiZXhwIjoxNjc4NDg1MDAzLCJpc3MiOiJrY3QtaW1zIiwiYXVkIjoia2N0LWltcyJ9.Vz7DzEF313Ndt6IW2-z4wVkEoZ2jqfsScKvWB2uL3dc
+
+###
+POST http://localhost:5236/auth/register
+Content-Type: application/json
+X-Version: 1.1
+
+{
+    "firstName": "Crispin",
+    "lastName": "Tuballa",
+    "email": "email@email.com",
+    "password": "password123"
+}
+
+###
+POST http://localhost:5236/auth/login
+Content-Type: application/json
+X-Version: 1.1
+
+{
+    "email": "email@email.com",
+    "password": "password123"
+}
