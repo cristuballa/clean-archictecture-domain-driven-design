@@ -1,4 +1,4 @@
-using Application.Services.Authentication.Common;
+using Application.Authentication.Common;
 using ErrorOr;
 using MediatR;
 

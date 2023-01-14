@@ -1,9 +1,9 @@
 using Application.Common.Interfaces;
-using Application.Services.Authentication.Common;
 using ErrorOr;
 using MediatR;
 using Domain.Common.Exceptions;
 using Domain.Entities;
+using Application.Authentication.Common;
 
 namespace Application.Authentication.Query.Login;
 

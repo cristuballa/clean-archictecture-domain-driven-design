@@ -7,9 +7,9 @@ Content-Type: application/json
 X-Version: 1.1
 
 {
-    "firstName": "Crispin",
-    "lastName": "Tuballa",
-    "email": "email@email.com",
+    "firstName": "",
+    "lastName": "",
+    "email": "emailemail.com",
     "password": "password123"
 }
 

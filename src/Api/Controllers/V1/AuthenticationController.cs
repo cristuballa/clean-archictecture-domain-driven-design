@@ -3,10 +3,10 @@ using Contracts.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using WebApi.Controllers;
 using ErrorOr;
-using Application.Services.Authentication.Common;
 using MediatR;
 using Application.Authentication.Commands.Register;
 using Application.Authentication.Query.Login;
+using Application.Authentication.Common;
 
 namespace Api.Controllers.V1
 {
