@@ -5,7 +5,7 @@ using Domain.Common.Exceptions;
 using Domain.Entities;
 using Application.Authentication.Common;
 
-namespace Application.Authentication.Query.Login;
+namespace Application.Authentication.Queries.Login;
 
 public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
 {

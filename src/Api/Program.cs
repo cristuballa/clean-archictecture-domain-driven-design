@@ -3,6 +3,7 @@ using Infrastructure;
 using WebApi;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using Application.Common.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddWebApiService();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddProblemDetails();
+builder.Services.AddMapping();
 //ApiVersioning//
 builder.Services.AddApiVersioning(options =>
 {

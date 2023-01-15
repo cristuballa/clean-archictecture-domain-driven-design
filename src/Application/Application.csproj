@@ -5,6 +5,8 @@
   <ItemGroup>
     <PackageReference Include="fluentvalidation" Version="11.4.0" />
     <PackageReference Include="fluentvalidation.aspnetcore" Version="11.2.2" />
+    <PackageReference Include="mapster" Version="7.3.0" />
+    <PackageReference Include="mapster.dependencyinjection" Version="1.0.0" />
     <PackageReference Include="mediatr" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
