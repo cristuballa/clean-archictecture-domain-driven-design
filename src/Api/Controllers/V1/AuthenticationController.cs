@@ -19,7 +19,6 @@ namespace Api.Controllers.V1
     {
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
-
         public AuthenticationController(IMediator mediator, IMapper mapper)
         {
             _mediator = mediator;
