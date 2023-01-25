@@ -24,7 +24,7 @@ namespace Infrastructure.Persistence
             // };
 
             //  _users.Add(user1);
-            return _users.FirstOrDefault(u => u.Email == email);
+            return _users?.FirstOrDefault(u => u.Email == email) ;
         }
     }
 }

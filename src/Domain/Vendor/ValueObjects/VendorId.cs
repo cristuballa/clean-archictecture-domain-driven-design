@@ -1,14 +1,14 @@
 using Domain.Common.Models;
 
-namespace Domain.Item.ValueObjects;
-public sealed class ItemId:ValueObject
+namespace Domain.Vendor.ValueObjects;
+public sealed class VendorId:ValueObject
 {
     public Guid Value { get;  }
-    private ItemId(Guid value)
+    private VendorId(Guid value)
     {
         Value = value;
     }
-    public static ItemId CreateUnique()
+    public static VendorId CreateUnique()
     {
         return new(Guid.NewGuid());
     }
