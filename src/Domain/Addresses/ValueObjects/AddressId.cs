@@ -1,14 +1,14 @@
 using Domain.Common.Models;
 
-namespace Domain.Category.ValueObjects;
-public sealed class CategoryId:ValueObject
+namespace Domain.Addresses.ValueObjects;
+public sealed class AddressId:ValueObject
 {
     public Guid Value { get;  }
-    private CategoryId(Guid value)
+    private AddressId(Guid value)
     {
         Value = value;
     }
-    public static CategoryId CreateUnique()
+    public static AddressId CreateUnique()
     {
         return new(Guid.NewGuid());
     }

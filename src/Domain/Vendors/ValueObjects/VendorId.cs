@@ -1,6 +1,6 @@
 using Domain.Common.Models;
 
-namespace Domain.Vendor.ValueObjects;
+namespace Domain.Vendors.ValueObjects;
 public sealed class VendorId:ValueObject
 {
     public Guid Value { get;  }

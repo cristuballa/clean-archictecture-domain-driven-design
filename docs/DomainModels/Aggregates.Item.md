@@ -5,15 +5,13 @@
 {
   "id":{ "value":"00000000-0000-0000-0000-00000000" },
   "description": "Item Description",
-  "quantityOnHand": 10,
   "sellingPrice":250,
   "costPrice": 200,
   "costCode": "ADGS",
-  "reorderLevel": 0,
-  "taxRatePercent": 0,
-  "reorderQuantity":0,
-  "taxRatePercent": 0,
-  "leadTime":0,
+  "reorderLevel": 10,
+  "taxRatePercent": 20,
+  "reorderQuantity":10,
+  "leadTime":7,
   "vendors":[
       {
           "id":{ "value":"00000000-0000-0000-0000-00000000" },
@@ -21,34 +19,35 @@
           "address": [
             {
               "id":{ "value":"00000000-0000-0000-0000-00000000" },
-              "address": "",
-              "city": "",
-              "state": "",
-              "zipCode": "",
-              "country": "",
-              "notes": ""
+              "addressLine1": "Address line 1",
+              "addressLine2": "Address lin 2",
+              "city": "Christchurch",
+              "state": "Canterbury",
+              "zipCode": "8044",
+              "country": "New Zealand",
+              "notes": "This is and address note"
             }
           ],
-          "phone":"",
-          "fax": "",
-          "email": "",
-          "website": "",
-          "contact": "",
-          "contactName": "",
-          "contactPhone": "",
-          "contactEmail": "",
-          "notes": ""
+          "phone":"02234553",
+          "fax": "02234553",
+          "email": "email@email.com",
+          "website": "companywebsite.com",
+          "contact": "0234235567",
+          "contactName": "John Doe",
+          "contactPhone": "0233340033",
+          "contactEmail": "contactemail@email.com",
+          "notes": "This is a vendors note"
       }
   ],
   "categoryId":{ "value":"00000000-0000-0000-0000-00000000" },
   "unitOfMeasureId" : { "value":"00000000-0000-0000-0000-00000000" },
   "locations" : [
       {
-      "id": "00000000-0000-0000-0000-00000000",
-      "name" :"",
-      "description":"",
-      "quantity" :"",
-      "notes":""
+      "id":{"value":"00000000-0000-0000-0000-00000000" },
+      "name" :"Warehouse1",
+      "description":"Hardware products",
+      "quantityOnHand" :"2",
+      "notes":"This is a note"
       }
     ],
   "manufacturerId" :{ "value":"00000000-0000-0000-0000-00000000" },

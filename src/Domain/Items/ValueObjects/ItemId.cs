@@ -1,6 +1,6 @@
 using Domain.Common.Models;
 
-namespace Domain.Item.ValueObjects;
+namespace Domain.Items.ValueObjects;
 public sealed class ItemId:ValueObject
 {
     public Guid Value { get;  }

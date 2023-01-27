@@ -1,11 +1,14 @@
-﻿using Domain.Category.ValueObjects;
-using Domain.Common.Models;
-using Domain.Item.ValueObjects;
-using Domain.Vendor;
-namespace Domain.Item;
+﻿using Domain.Common.Models;
+using Domain.Items.ValueObjects;
+using Domain.Items.Entities;
+using Domain.Vendors;
+
+namespace Domain.Items;
 
 public sealed class Item : AggregateRoot<ItemId>
 {
+    private readonly List<Vendor> _vendors = new();
+    private readonly List<Location> _locations = new();
     public string Description { get; }
     public float QuantityOnHand { get; }
     public float SellingPrice { get; }
@@ -19,8 +22,9 @@ public sealed class Item : AggregateRoot<ItemId>
     public int LeadTime { get; }
     public DateTime Created { get; }
     public DateTime Modified { get; }
-    
-    private Item(ItemId ItemId,
+    public IReadOnlyList<Vendor> Vendors => _vendors.AsReadOnly();
+    public IReadOnlyList<Location> Locations => _locations.AsReadOnly();
+    private Item(ItemId itemId,
                  string description,
                  float quantityOnHand,
                  float sellingPrice,
@@ -33,7 +37,7 @@ public sealed class Item : AggregateRoot<ItemId>
                  int taxRatePercent,
                  int leadTime,
                  DateTime created,
-                 DateTime modified) : base(ItemId)
+                 DateTime modified) : base(itemId)
     {
         Description = description;
         QuantityOnHand = quantityOnHand;

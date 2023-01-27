@@ -1,21 +1,25 @@
+using Domain.Items.ValueObjects;
 using Domain.Common.Models;
-using Domain.Vendor.ValueObjects;
 
-namespace Domain.Vendor;
-public sealed class Vendor:AggregateRoot<VendorId>
+namespace Domain.Items.Entities;
+
+public sealed class Category:Entity<CategoryId>
 {
     public string Name { get; private set; } = default!;
     public string Description { get; private set; } = default!;
     public string Notes { get; private set; } = default!;
-    private Vendor(VendorId id, string name, string description, string notes) : base(id)
+    private Category(CategoryId categoryId,
+                     string name,
+                     string description,
+                     string notes) : base(categoryId)
     {
         Name = name;
         Description = description;
         Notes = notes;
     }
-    public static Vendor Create(string name, string description, string notes)
+    public static Category Create(string name, string description, string notes)
     {
-        return new(VendorId.CreateUnique(), name, description, notes);
+        return new(CategoryId.CreateUnique(), name, description, notes);
     }
     public void Update(string name, string description, string notes)
     {
@@ -24,3 +28,4 @@ public sealed class Vendor:AggregateRoot<VendorId>
         Notes = notes;
     }
 }
+
