@@ -1,5 +1,5 @@
 
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMmJkMzY4MC01MjVhLTRiNWEtOTU4Yy1jYzdiOThhMGIzYzQiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJDcmlzcGluIiwiZmFtaWx5X25hbWUiOiJUdWJhbGxhIiwianRpIjoiNDgwZjFkMDMtZmZmNi00MjU4LTlmNzItYjc5YjhkMjBhNjg1IiwiZXhwIjoxNjc4NDg1MDAzLCJpc3MiOiJrY3QtaW1zIiwiYXVkIjoia2N0LWltcyJ9.Vz7DzEF313Ndt6IW2-z4wVkEoZ2jqfsScKvWB2uL3dc
+@token=yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5MDBmM2E0Ni1jZjA5LTQwZGQtYjQ1NS1kMDM2YjNiYmFhYTciLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJDcmlzcGluIiwiZmFtaWx5X25hbWUiOiJUdWJhbGxhIiwianRpIjoiYjc5OTRlZTUtMjlhMS00YjNhLThlMzAtODNiMTlkNjk5OWE0IiwiZXhwIjoxNjgwNDg3NjY4LCJpc3MiOiJrY3QtaW1zIiwiYXVkIjoia2N0LWltcyJ9.tYEZhvr_fZRM0DVgVfD8jKSI9NXQRwl5rQ3y3Fjk52c
 
 ###
 POST http://localhost:5236/auth/register
@@ -7,7 +7,7 @@ Content-Type: application/json
 X-Version: 1.1
 
 {
-    "firstName": "Crisping",
+    "firstName": "Crispin",
     "lastName": "Tuballa",
     "email": "email@email.com",
     "password": "password123"

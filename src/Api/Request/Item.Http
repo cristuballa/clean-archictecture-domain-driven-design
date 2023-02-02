@@ -1,6 +1,50 @@
 @host=http://localhost:5236
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MTQ3YTA4Zi1mMjBjLTQ3ZmEtOTc4NC1jZWFhOTBjYmEyYWMiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJDcmlzcGluIiwiZmFtaWx5X25hbWUiOiJUdWJhbGxhIiwianRpIjoiMWRlNDUxMWYtYTgwNS00YWYzLWI4MjctMmIxZWRlNGZiNTk5IiwiZXhwIjoxNjc4NTAyNTIxLCJpc3MiOiJrY3QtaW1zIiwiYXVkIjoia2N0LWltcyJ9.6fEUAgOUbHWNfm7-2hYncDj-_I3dMlBtFapjNV4EM7M
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5MDBmM2E0Ni1jZjA5LTQwZGQtYjQ1NS1kMDM2YjNiYmFhYTciLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJDcmlzcGluIiwiZmFtaWx5X25hbWUiOiJUdWJhbGxhIiwianRpIjoiODU4YjAwOTgtZWRkNC00ZjFhLTk5YmQtY2M2MDhhNzM4MTI1IiwiZXhwIjoxNjgwNDg3NzYxLCJpc3MiOiJrY3QtaW1zIiwiYXVkIjoia2N0LWltcyJ9.Py6MhXeECPf_HvP8-Pf2r2smwyfNGgOCAFY1UFuKKg0
 ###
 
-GET {{host}}/items
-//Authorization: Bearer {{token}}
+POST {{host}}/items/create
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "description": "Item Description",
+  "sellingPrice":250.00,
+  "costPrice": 200.00,
+  "costCode": "ADGS",
+  "reorderLevel": 10,
+  "reorderQuantity":10,
+  "taxRatePercent": 20,
+  "leadTime":7,
+    "vendors":[
+      {
+          "name":"PbTech",
+          "addresses": [
+            {
+              "addressLine1": "Address line 1",
+              "addressLine2": "Address line 2",
+              "city": "Christchurch",
+              "state": "Canterbury",
+              "zipCode": "2345",
+              "country": "New Zealand"
+            }
+          ],
+          "phone":"02234553",
+          "fax": "02234553",
+          "email": "email@email.com",
+          "website": "companywebsite.com",
+          "contact": "2324",
+          "contactName": "John Doe",
+          "contactPhone": "0233340033",
+          "contactEmail": "contactemail@email.com"
+      }
+  ],
+  "locations" : [
+      {
+      "name" :"Warehouse1",
+      "quantityOnHand" :2,
+      "notes":"This is a note"
+      }
+    ],
+  "created": "2023-01-28T09:15:56.543Z",
+  "modified": "2023-01-28T09:15:56.543Z"
+}
