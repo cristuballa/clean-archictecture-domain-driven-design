@@ -3,43 +3,69 @@ using Domain.Common.Models;
 using Domain.Vendors.ValueObjects;
 
 namespace Domain.Vendors;
-public sealed class Vendor:Entity<VendorId>
+public sealed class Vendor : Entity<VendorId>
 {
     private readonly List<Address> _address = new();
-    public string Name { get; private set; } = default!;
-    public string Description { get; private set; } = default!;
-    public string Notes { get; private set; } = default!;
-    public string Phone { get; private set; } = default!;
+    public string Name { get; private set;} = default!;
+    public string Fax { get; private set;} = default!;
+    public string Phone { get; private set;} = default!;
     public string Email { get; private set; } = default!;
-    public string Website { get; private set; } = default!;
-    public string Contracts { get; private set; } = default!;
-    public string ContactName { get; private set; } = default!;
+    public string Website { get; private set;} = default!;
+    public string Contact { get; private set;} = default!;
+    public string ContactName { get; private set;} = default!;
     public string ContactPhone { get; private set; } = default!;
-    public string ContactEmail { get; private set; } = default!;
-    public  IReadOnlyList<Address> Addresses => _address.AsReadOnly();
-    
+    public string ContactEmail { get; private set;} = default!;
+    public IReadOnlyList<Address> Addresses => _address.AsReadOnly();
+
     private Vendor(VendorId vendorId,
                    string name,
-                   string description,
-                   string notes,
+                   string fax,
                    string phone,
                    string email,
                    string website,
-                   string contracts,
+                   string contact,
                    string contactName,
                    string contactPhone,
-                   string contactEmail) : base(vendorId)
+                   string contactEmail,
+                   IList<Address> addresses) : base(vendorId)
     {
         Name = name;
-        Description = description;
-        Notes = notes;
+        Fax = fax;
         Phone = phone;
         Email = email;
         Website = website;
-        Contracts = contracts;
+        Contact = contact;
         ContactName = contactName;
         ContactPhone = contactPhone;
         ContactEmail = contactEmail;
+        _address.AddRange(addresses);
     }
-   
+    public static Vendor Create(string name,
+                                string fax,
+                                string phone,
+                                string email,
+                                string website,
+                                string contact,
+                                string contactName,
+                                string contactPhone,
+                                string contactEmail,
+                                List<Address> addresses
+                              )
+    {
+        return new(VendorId.CreateUnique(),
+                   name,
+                   fax,
+                   phone,
+                   email,
+                   website,
+                   contact,
+                   contactName,
+                   contactPhone,
+                   contactEmail, addresses);
+    }
+#pragma warning disable CS8618 // Non-nullable field is uninitialized. Consider declaring as nullable.
+    private Vendor()
+    {
+    }
+#pragma warning restore CS8618 // Non-nullable field is uninitialized. Consider declaring as nullable.
 }

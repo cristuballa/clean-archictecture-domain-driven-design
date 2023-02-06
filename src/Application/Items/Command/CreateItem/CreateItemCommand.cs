@@ -6,12 +6,13 @@ namespace Application.Items.Command.CreateItem;
 
 public record CreateItemCommand
 (
-    string Name,
     string Description,
     float SellingPrice,
     float CostPrice,
+    string CostCode,
     int ReorderLevel,
-    int taxRatePercent,
+    int ReorderQuantity,
+    int TaxRatePercent,
     int LeadTime,
     List<VendorCommand> Vendors,
     List<LocationCommand> Locations,
@@ -22,24 +23,22 @@ public record CreateItemCommand
 public record LocationCommand
 (
     string Name,
-    string Description,
     int QuantityOnHand,
     string Notes
 
 );
 public record VendorCommand
 (
-    string Name,
-    string Description,
-    string Notes,
+   string Name,
+    List<AddressCommand> Addresses,
     string Phone,
+    string Fax,
     string Email,
     string Website,
-    string Contracts,
+    string Contact,
     string ContactName,
     string ContactPhone,
-    string ContactEmail,
-    List<AddressCommand> Addresses
+    string ContactEmail
 );
 
 public record AddressCommand

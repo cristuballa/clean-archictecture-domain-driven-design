@@ -1,13 +1,16 @@
-﻿namespace Contracts.Items;
+﻿using System.Text.Json.Serialization;
+
+namespace Contracts.Items;
 
 public record ItemRequest
 (
-    string Name,
     string Description,
     float SellingPrice,
     float CostPrice,
+    string CostCode,
     int ReorderLevel,
-    int taxRatePercent,
+    int ReorderQuantity,
+    int TaxRatePercent,
     int LeadTime,
     List<VendorRequest> Vendors,
     List<LocationRequest> Locations,
@@ -17,7 +20,6 @@ public record ItemRequest
 public record LocationRequest
 (
     string Name,
-    string Description,
     int QuantityOnHand,
     string Notes
 
@@ -25,16 +27,15 @@ public record LocationRequest
 public record VendorRequest
 (
     string Name,
-    string Description,
-    string Notes,
+    List<AddressRequest> Addresses,
     string Phone,
+    string Fax,
     string Email,
     string Website,
-    string Contracts,
+    string Contact,
     string ContactName,
     string ContactPhone,
-    string ContactEmail,
-    List<AddressRequest> Addresses
+    string ContactEmail
 );
 
 public record AddressRequest

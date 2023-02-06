@@ -1,12 +1,16 @@
 using Domain.Common.Models;
 
 namespace Domain.Items.ValueObjects;
-public sealed class CategoryId:ValueObject
+public sealed class CategoryId : ValueObject
 {
-    public Guid Value { get;  }
+    public Guid Value { get; }
     private CategoryId(Guid value)
     {
         Value = value;
+    }
+    public static CategoryId Create(Guid value)
+    {
+        return new(value);
     }
     public static CategoryId CreateUnique()
     {

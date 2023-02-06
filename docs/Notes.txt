@@ -1,6 +1,25 @@
 KCT-IMS API TOOLS AND PACKAGES
 
 .NET 7 SDK
+*** IMPLEMENT THE FOLLOWING****
+1. Rest API
+2. Swagger
+3. Authentication and Authorization with Jwt Token
+4. Api Versioning
+5. MAPPING-Mapster
+6. Caching
+7. Fluent Validation
+8. Rate Limiting
+9. LOGGING- Serilog
+10. Monitoring with Seq
+11. Clean Architecture-CQRS and Repository Pattern
+12. Domain-Driven Design Principle
+13. Global Error Handling and Api Flow Control-ERROROR
+14. EF Core
+15. API Load Testing (Stress, Spike, Load, Soak) https://k6.io/docs/using-k6/http-requests/
+16.
+
+
 
 ** API CONTROLLER ***
 - Microsoft.AspNetCore.Mvc;
@@ -31,7 +50,6 @@ https://www.youtube.com/watch?v=XdKpAFy6It8
 
 *** 0. CLEAN ARCHITECTURE & DDD- Project Setup ***
     https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=2
-
 
 
 *** 1.CGENERATE JWT TOKEN  ***
@@ -78,7 +96,6 @@ https://www.youtube.com/watch?v=XdKpAFy6It8
 
 *** 6. OBJECT MAPPING -MAPSTER ***
     https://www.youtube.com/watch?v=vBs6naPD6RE&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=7
-    
 
 
 *** 7. VALIDATION BEHAVIOUR ***
@@ -121,7 +138,9 @@ https://www.youtube.com/watch?v=XdKpAFy6It8
 *** 14. EF CORE & DDD & CLEAN ARCHITECTURE - MAPPING AGGREGATES TO RELATIONAL DATABASE ***
     https://www.youtube.com/watch?v=5_un3PUER8U
 
-
-
+dotnet ef migrations add InitialCreate --project src\infrastructure --startup-project src\api
+dotnet tool install --global dotnet-ef
+dotnet tool list --global
+dotnet ef database update -p src\infrastructure -s src\api
 
 

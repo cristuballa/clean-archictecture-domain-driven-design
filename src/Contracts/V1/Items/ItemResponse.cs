@@ -2,22 +2,22 @@ namespace Contracts.Items;
 
 public record ItemResponse
 (
-    string Name,
     string Description,
     float SellingPrice,
     float CostPrice,
+    string CostCode,
     int ReorderLevel,
-    int taxRatePercent,
+    int ReorderQuantity,
+    int TaxRatePercent,
     int LeadTime,
-    List<VendorResponse> Vendors,
-    List<LocationResponse> Locations,
+    List<VendorRequest> Vendors,
+    List<LocationRequest> Locations,
     DateTime Created,
     DateTime Modified
 );
 public record LocationResponse
 (
     string Name,
-    string Description,
     int QuantityOnHand,
     string Notes
 
@@ -25,16 +25,15 @@ public record LocationResponse
 public record VendorResponse
 (
     string Name,
-    string Description,
-    string Notes,
+    List<AddressRequest> Addresses,
     string Phone,
+    string Fax,
     string Email,
     string Website,
-    string Contracts,
+    string Contact,
     string ContactName,
     string ContactPhone,
-    string ContactEmail,
-    List<AddressResponse> Addresses
+    string ContactEmail
 );
 
 public record AddressResponse

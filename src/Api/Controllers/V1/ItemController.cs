@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers.V1;
 
-[Route("[Controller]")]
+[Route("items")]
 public class ItemsController : ApiController
 {
     private readonly IMapper _mapper;
@@ -18,15 +18,19 @@ public class ItemsController : ApiController
     }
 
     [HttpPost("create")]
-    public IActionResult CreateItem(ItemRequest request)
+    public async Task<IActionResult> CreateItem(ItemRequest request)
     {
-        var command= _mapper.Map<CreateItemCommand>(request);
-        var result = _mediator.Send(command);
-        return Ok(result);
+        var command = _mapper.Map<CreateItemCommand>(request);
+        var createItemResult = await _mediator.Send(command);
+
+
+        return createItemResult.Match(
+                 item => Ok(_mapper.Map<ItemResponse>(item)),
+                 errors => Problem(errors));
     }
 
     [HttpGet]
-    public IActionResult Get()
+    public IActionResult GetItem()
     {
         return Ok("Hello World");
     }

@@ -4,9 +4,9 @@ using Domain.Items.ValueObjects;
 
 namespace Domain.Items.Entities;
 public sealed class Location:Entity<LocationId>
-{    public string Name { get; private set; } = default!;
-    public float QuantityOnHand { get; private set; }
-    public string Notes { get; private set; }
+{    public string Name { get;} = default!;
+    public float QuantityOnHand { get;  }
+    public string Notes { get; }
 
     private Location(LocationId locationId,
                      string name,
@@ -21,5 +21,9 @@ public sealed class Location:Entity<LocationId>
     {
         return new(LocationId.CreateUnique(), name, quantityOnHand, notes);
     }
-
+    #pragma warning disable 8618
+    private Location()
+    {
+    }
+    #pragma warning disable 8618
 }

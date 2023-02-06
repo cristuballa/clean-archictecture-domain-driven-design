@@ -1,12 +1,16 @@
 using Domain.Common.Models;
 
 namespace Domain.Items.ValueObjects;
-public sealed class LocationId:ValueObject
+public sealed class LocationId : ValueObject
 {
-    public Guid Value { get;  }
+    public Guid Value { get; }
     private LocationId(Guid value)
     {
         Value = value;
+    }
+    public static LocationId Create(Guid value)
+    {
+        return new(value);
     }
     public static LocationId CreateUnique()
     {

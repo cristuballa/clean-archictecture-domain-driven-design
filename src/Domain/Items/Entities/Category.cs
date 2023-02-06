@@ -27,5 +27,10 @@ public sealed class Category:Entity<CategoryId>
         Description = description;
         Notes = notes;
     }
+#pragma warning disable 8618
+    private Category()
+    {
+    }
+#pragma warning disable 8618
 }
 
