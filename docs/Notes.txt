@@ -17,7 +17,6 @@ KCT-IMS API TOOLS AND PACKAGES
 13. Global Error Handling and Api Flow Control-ERROROR
 14. EF Core
 15. API Load Testing (Stress, Spike, Load, Soak) https://k6.io/docs/using-k6/http-requests/
-16.
 
 
 
@@ -34,8 +33,20 @@ https://www.youtube.com/watch?v=38bQNWKh0dk&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0
 - set
 - list
 
+*** Validate your dependencies correctly in .NET ***
+https://www.youtube.com/watch?v=8JkHgymp2R4&t=24s
+
+
+***Health Checks ***
+Adding Health Checks | ASP.NET Core 5 REST API 
+https://www.youtube.com/watch?v=bdgtYbGYsK0&t=528s
+
 *** LOGGING ***
     -Serilog
+
+*** Rate Limiting ***
+How to rate limit (throttle) your ASP.NET Core API
+- https://www.youtube.com/watch?v=GQAgh_z1rHY
 
 
 *** API VERSIONING ***
@@ -46,7 +57,8 @@ https://www.youtube.com/watch?v=XdKpAFy6It8
 
 
 ***CACHE***
-
+Response caching using Redis | ASP.NET Core 5 REST API Tutorial
+https://www.youtube.com/watch?v=KboCpJGa9ag
 
 *** 0. CLEAN ARCHITECTURE & DDD- Project Setup ***
     https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=2
