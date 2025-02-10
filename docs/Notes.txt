@@ -1,7 +1,7 @@
 KCT-IMS API TOOLS AND PACKAGES
 
 .NET 7 SDK
-*** IMPLEMENT THE FOLLOWING****
+*** IMPLEMENTS THE FOLLOWING****
 1. Rest API
 2. Swagger
 3. Authentication and Authorization with Jwt Token
